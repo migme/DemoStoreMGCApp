@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     public static final String GOOGLE_PLAY        = "https://play.google.com/store/apps/details?id=";
-    public static final String GOOGLE_REFFERRER   = "&referrer=utm_source%3Dmigme%26utm_medium%3Dfunkey%26utm_campaign%3Dfunkey";
+    public static final String GOOGLE_REFFERRER   = "&referrer=utm_source%3D3rdparty%26utm_medium%3Diap%26utm_campaign%3Diap";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setData(Uri.parse(GOOGLE_PLAY + "com.projectgoth" + GOOGLE_REFFERRER));
                 startActivity(intent);
             } else {
-                onCreateDialog("Please upgrade your migme to latest version above v6.00.029").show();
+                onCreateDialog("Please upgrade your migme app").show();
             }
         }catch (Exception e) {
             Log.d(TAG, "Happen Exception: " + e.getMessage());
